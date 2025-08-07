@@ -3,7 +3,7 @@
 
 pkgname=vvvvvv-archipelago-git
 binname=vvvvvv-archipelago
-pkgver=20250807.1
+pkgver=20250412.027daa5d
 _pkgver=git
 pkgrel=1
 pkgdesc='A retro-styled 2D platformer patched for Archipelago multiworld'
@@ -15,7 +15,7 @@ makedepends=('git' 'cmake')
 provides=('vvvvvv-archipelago')
 conflicts=('vvvvvv-archipelago')
 source=(
-  "git+https://github.com/mateon1/V6AP"
+  "git+https://github.com/N00byKing/VVVVVV"
   "git+https://github.com/lvandeve/lodepng"
   "git+https://github.com/icculus/physfs/"
   "git+https://github.com/leethomason/tinyxml2/"
@@ -44,12 +44,12 @@ sha256sums=('SKIP'
 install=${pkgname}.install
 
 pkgver() {
-  cd "${srcdir}/V6AP"
+  cd "${srcdir}/VVVVVV"
   git log -1 --format='%cd.%h' --date=short | tr -d -
 }
 
 prepare() {
-  cd V6AP
+  cd VVVVVV
   git submodule init
   for submodule in lodepng physfs tinyxml2 FAudio c-hashmap APCpp SheenBidi; do
     git config "submodule.third_party/$submodule.url" "$srcdir/$submodule"
@@ -64,7 +64,7 @@ prepare() {
 }
 
 build() {
-  cd V6AP/desktop_version
+  cd VVVVVV/desktop_version
   mkdir -p build
   cd build
   cmake ..
@@ -72,7 +72,7 @@ build() {
 }
 
 package() {
-  cd "${srcdir}/V6AP/desktop_version/build"
+  cd "${srcdir}/VVVVVV/desktop_version/build"
   install -d "${pkgdir}/opt/${binname}"
   install -D -m644 ../../LICENSE.md "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
   # Legal: There used to be a separate LICENSE-data.md, but the LICENSE.md also mentions the "Make and Play" edition specifically.
