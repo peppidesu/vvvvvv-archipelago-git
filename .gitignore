@@ -12,5 +12,6 @@ zlib/
 SheenBidi/
 IXWebSocket/
 jsoncpp/
+APCpp_datapkg.cache
 *.pkg.tar*
 vvvvvv-mp-11192019-bin
