@@ -3,7 +3,7 @@
 
 pkgname=vvvvvv-archipelago-git
 binname=vvvvvv-archipelago
-pkgver=20250303.042c0e36
+pkgver=20250807.1
 _pkgver=git
 pkgrel=1
 pkgdesc='A retro-styled 2D platformer patched for Archipelago multiworld'
