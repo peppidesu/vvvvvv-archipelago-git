@@ -3,7 +3,7 @@
 
 pkgname=vvvvvv-archipelago-git
 binname=vvvvvv-archipelago
-pkgver=20250807.1
+pkgver=20250303.042c0e36
 _pkgver=git
 pkgrel=1
 pkgdesc='A retro-styled 2D platformer patched for Archipelago multiworld'
@@ -39,7 +39,7 @@ sha256sums=('SKIP'
   'SKIP'
   'SKIP'
   'SKIP'
-  'e1aaa4df5e4c464bda3c3489392abfaba306e9fb37023af15839db0277785e50'
+  '0c0d10f1a64a5c3bf703af38cb0f79fa7b77fb7f43e8eec9a906da454f1e34d1'
 )
 install=${pkgname}.install
 
