@@ -3,7 +3,7 @@
 
 pkgname=vvvvvv-archipelago-git
 binname=vvvvvv-archipelago
-pkgver="20250807"
+pkgver=20250807.1
 _pkgver=git
 pkgrel=1
 pkgdesc='A retro-styled 2D platformer patched for Archipelago multiworld'
@@ -41,6 +41,7 @@ sha256sums=('SKIP'
   'SKIP'
   'e1aaa4df5e4c464bda3c3489392abfaba306e9fb37023af15839db0277785e50'
 )
+install=${pkgname}.install
 
 pkgver() {
   cd "${srcdir}/V6AP"
@@ -71,10 +72,6 @@ build() {
 }
 
 package() {
-  if [ ! -e "${srcdir}/../data.zip" ]; then
-    echo "ERROR: data.zip not found in directory. Please ensure it is present."
-    return 1
-  fi
   cd "${srcdir}/V6AP/desktop_version/build"
   install -d "${pkgdir}/opt/${binname}"
   install -D -m644 ../../LICENSE.md "${pkgdir}/usr/share/licenses/${pkgname}/LICENSE.md"
@@ -84,7 +81,5 @@ package() {
     "${pkgdir}/opt/${binname}/${binname}"
 
   cd "${srcdir}"
-  install -m644 -t "${pkgdir}/opt/${binname}" \
-    ../data.zip
   install -D -m755 "${srcdir}/${binname}.sh" "${pkgdir}/usr/bin/${binname}"
 }
