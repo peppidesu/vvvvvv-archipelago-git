@@ -1,6 +1,6 @@
 pkgbase = vvvvvv-archipelago-git
 	pkgdesc = A retro-styled 2D platformer patched for Archipelago multiworld
-	pkgver = 20250807.1
+	pkgver = 20250412.027daa5d
 	pkgrel = 1
 	url = https://github.com/mateon1/V6AP
 	install = vvvvvv-archipelago-git.install
@@ -13,7 +13,7 @@ pkgbase = vvvvvv-archipelago-git
 	depends = sdl2_mixer
 	provides = vvvvvv-archipelago
 	conflicts = vvvvvv-archipelago
-	source = git+https://github.com/mateon1/V6AP
+	source = git+https://github.com/N00byKing/VVVVVV
 	source = git+https://github.com/lvandeve/lodepng
 	source = git+https://github.com/icculus/physfs/
 	source = git+https://github.com/leethomason/tinyxml2/
