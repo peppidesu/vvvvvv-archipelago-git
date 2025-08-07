@@ -1,8 +1,8 @@
 pkgbase = vvvvvv-archipelago-git
 	pkgdesc = A retro-styled 2D platformer patched for Archipelago multiworld
 	pkgver = 20250412.027daa5d
-	pkgrel = 1
-	url = https://github.com/mateon1/V6AP
+	pkgrel = 2
+	url = https://github.com/peppidesu/vvvvvv-archipelago-git.git
 	install = vvvvvv-archipelago-git.install
 	arch = i686
 	arch = x86_64
